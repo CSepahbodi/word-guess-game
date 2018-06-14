@@ -1,5 +1,13 @@
 h1 {
     text-align: center;
     Color: Blue;
-    font-family: 
+}
+
+.headingimg {
+    align-content: center;
+}
+
+.thetext {
+    text-align: center;
+    color: blueviolet;
 }

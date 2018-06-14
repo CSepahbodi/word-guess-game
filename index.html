@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <title>Crash and Burn</title>
 </head>
 
@@ -13,10 +15,13 @@
             <div>
                 <h1>Welcome to Cyberdelia!</h1>
                 <img class="headimg" src="assets/images/hackthegibson.jpg">
+                <br>
+                <p class="thetxt">This is a basic hangman game. Guess the letters in the word. All words are from the movie Hackers. Guess the right word and you have hacked the Gibson computer and saved the crew from prosecution. If you don't guess the word then you lose and everyone gets busted! You have ten guesses total. Good luck!</p>
+                <br>
                 <h2>Guess the word:</h2>
                 <p id="right"></p>
                 <p>
-                    <span id="remain">15</span> guesses remaining!
+                    <span id="remain">10</span> guesses remaining!
                 </p>
                 <p id="wrong"></p>
             </div>
@@ -30,10 +35,10 @@
     </style>
 
     <script type="text/javascript">
-      var words = ['zerocool', 'crashoverride', 'lordnikon', 'phantomphreak', 'acidburn', 'joey'];
+      var words = ['zerocool', 'crashoverride', 'lordnikon', 'phantomphreak', 'acidburn', 'joey', 'gibsoncomputer', 'davinci'];
       var game = {
         guessed: [],
-        left: 15,
+        left: 10,
         start: function() {
           this.complete = false;
           this.word = words[Math.floor(Math.random() * words.length)];
@@ -60,7 +65,7 @@
             }
           }
           if (this.$right.innerHTML.indexOf('_') < 0) {
-            alert('you win!');
+            alert('you hacked the Gibson!' + ' the word was ' + this.word);
             this.complete = true;
           }
         },
@@ -81,5 +86,6 @@
         game.guess(letter);
       };
     </script>
+
 </body>
 </html>

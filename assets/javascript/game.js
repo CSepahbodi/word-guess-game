@@ -38,7 +38,7 @@ var words = ['zerocool', 'crashoverride', 'lordnikon', 'phantomphreak', 'acidbur
           this.left--;
           this.$remain.innerHTML = this.left;
           if (this.left < 1) {
-            alert('you lose! '+ 'the word was ' + this.word);
+            alert('you got busted! Universally stupid, man...'+ 'The word was ' + this.word);
             this.complete = true;
           }
         }
